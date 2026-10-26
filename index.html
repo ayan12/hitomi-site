@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex"><meta name="description" content="Hitomi Tattoo Studio, West Jakarta. Realism, Japanese, geometric and fine line tattoos and piercing. Walk-ins welcome."><style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Hitomi Tattoo Studio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600&text=%E7%9E%B3&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#0b0b0c;--bg2:#151517;--fg:#efece6;--dim:#9a968e;--line:#2a2a2d;--red:#e2412f;color-scheme:dark}
+*{box-sizing:border-box}
+html{overflow-x:hidden}
+html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 17px/1.6 "IBM Plex Sans",system-ui,sans-serif;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.g{padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.syne{font-family:Syne,"Arial Black",sans-serif}
+h2{font-family:Syne,"Arial Black",sans-serif;font-weight:800;margin:0;line-height:.9;font-size:clamp(44px,8vw,128px);letter-spacing:-.03em;text-transform:uppercase;text-wrap:balance}
+.kick{font-weight:600;color:var(--red);font-size:15px;margin:0 0 14px;display:flex;gap:10px;align-items:center}
+.kick::before{content:"";width:10px;height:10px;border-radius:50%;border:2px solid var(--red)}
+.btn{display:inline-flex;align-items:center;gap:12px;border-radius:99px;padding:16px 26px;font-weight:600;font-size:16px;text-decoration:none;border:1.5px solid var(--fg);background:transparent;will-change:transform;transition:background .25s,color .25s}
+.btn:hover{background:var(--fg);color:var(--bg)}
+.btn.red{background:var(--red);border-color:var(--red);color:#fff}
+.btn.red:hover{background:#fff;border-color:#fff;color:var(--bg)}
+
+#cur{position:fixed;left:0;top:0;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;border:1.5px solid var(--fg);pointer-events:none;z-index:999;display:none;align-items:center;justify-content:center;font:600 11px "IBM Plex Sans",sans-serif;transition:width .3s,height .3s,margin .3s,background .3s,border-color .3s;mix-blend-mode:difference}
+#cur::after{content:"";width:5px;height:5px;border-radius:50%;background:var(--fg)}
+#cur.big{width:90px;height:90px;margin:-45px 0 0 -45px;background:var(--fg);color:var(--bg);mix-blend-mode:normal}
+#cur.big::after{display:none}
+@media (pointer:fine){#cur{display:flex}}
+
+.nav{position:fixed;inset:0 0 auto;z-index:60;display:flex;justify-content:space-between;align-items:center;padding-top:calc(16px + env(safe-area-inset-top,0px));mix-blend-mode:difference;pointer-events:none;color:#fff}
+.nav a{pointer-events:auto;text-decoration:none}
+.logo{display:flex;align-items:center;gap:10px;font-family:Syne,sans-serif;font-weight:800;font-size:20px;letter-spacing:.06em}
+.logo i{width:24px;height:24px;border-radius:50%;border:2.5px solid #fff;display:grid;place-items:center}
+.logo i::after{content:"";width:8px;height:8px;border-radius:50%;background:#fff}
+.navr{display:flex;gap:24px;font-weight:600;font-size:15px}
+@media (max-width:700px){.navr .hm{display:none}}
+
+/* HERO EYE */
+.hero{position:relative;height:100svh;min-height:680px;display:grid;place-items:center;overflow:hidden}
+.kanji{position:absolute;font-family:"Noto Serif JP",serif;font-weight:600;font-size:min(92vh,90vw);line-height:1;color:#141416;user-select:none;pointer-events:none}
+.eye{position:relative;width:min(64vmin,560px);aspect-ratio:1;z-index:2}
+.ring{position:absolute;inset:-13%;width:126%;height:126%;animation:spin 40s linear infinite}
+.ring text{font:600 12px Syne,sans-serif;fill:var(--fg)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.iris{position:absolute;inset:0;border-radius:50%;overflow:hidden;background:#000;box-shadow:0 0 0 1.5px rgba(239,236,230,.25),0 40px 120px -30px rgba(226,65,47,.35)}
+.iris img{position:absolute;inset:-12%;width:124%;height:124%;object-fit:cover;transition:opacity .5s;will-change:transform}
+.iris .shade{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle,transparent 48%,rgba(0,0,0,.65) 100%);pointer-events:none}
+.pupil{position:absolute;left:50%;top:50%;width:20%;aspect-ratio:1;margin:-10% 0 0 -10%;border-radius:50%;border:1.5px solid rgba(255,255,255,.85);box-shadow:0 0 0 999px rgba(0,0,0,.0),inset 0 0 30px rgba(0,0,0,.5);pointer-events:none;transition:width .35s,margin .35s;will-change:transform}
+.pupil::after{content:"";position:absolute;width:22%;height:22%;border-radius:50%;background:#fff;top:18%;left:22%;opacity:.9}
+.eye.dil .pupil{width:34%;margin:-17% 0 0 -17%}
+.lid{position:absolute;left:-4%;right:-4%;height:52%;background:var(--bg);z-index:3;transform:scaleY(0);pointer-events:none}
+.lid.t{top:-2%;transform-origin:top;border-radius:0 0 50% 50%/0 0 30% 30%}
+.lid.b{bottom:-2%;transform-origin:bottom;border-radius:50% 50% 0 0/30% 30% 0 0}
+.hcopy{position:absolute;left:0;right:0;bottom:calc(26px + env(safe-area-inset-bottom,0px));display:flex;justify-content:space-between;align-items:end;gap:20px;z-index:4;flex-wrap:wrap}
+.hcopy h1{margin:0;font-family:Syne,sans-serif;font-weight:800;text-transform:uppercase;font-size:clamp(34px,5vw,74px);line-height:.9;letter-spacing:-.02em;max-width:9ch}
+.hcopy .r{display:grid;gap:14px;justify-items:end;text-align:right}
+.hcopy .r p{margin:0;color:var(--dim);max-width:34ch;font-size:15px}
+.hcopy .r p b{color:var(--fg)}
+.cnt{position:absolute;top:calc(84px + env(safe-area-inset-top,0px));right:max(20px,env(safe-area-inset-right,0px));font:600 13px "IBM Plex Sans",sans-serif;color:var(--dim);z-index:4;text-align:right}
+.cnt b{color:var(--fg);display:block;font:800 18px Syne,sans-serif}
+@media (max-width:700px){.eye{width:76vw;margin-bottom:22vh}.hcopy{flex-direction:column;align-items:flex-start}.hcopy .r{justify-items:start;text-align:left}}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-block:1px solid var(--line)}
+.stats div{padding:26px 20px;border-right:1px solid var(--line)}
+.stats div:last-child{border-right:0}
+.stats b{display:block;font:800 clamp(30px,4vw,54px)/1 Syne,sans-serif}
+.stats span{color:var(--dim);font-size:14px}
+@media (max-width:700px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stats div:nth-child(2){border-right:0}.stats div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+
+/* CHAPTERS (pinned) */
+.chap{position:relative;height:100svh;overflow:hidden}
+.layer{position:absolute;inset:0;display:grid;place-items:center}
+.layer .ph{height:min(84svh,760px);aspect-ratio:495/812;max-width:86vw;border-radius:999px 999px 24px 24px;overflow:hidden;clip-path:circle(0% at 50% 50%)}
+.layer .ph img{width:100%;height:100%;object-fit:cover;scale:1.25}
+.word{position:absolute;left:0;right:0;top:50%;translate:0 -50%;text-align:center;font:800 clamp(60px,15vw,250px)/.85 Syne,sans-serif;text-transform:uppercase;letter-spacing:-.04em;color:#fff;mix-blend-mode:difference;pointer-events:none;z-index:2;opacity:0}
+.cdesc{position:absolute;left:max(20px,env(safe-area-inset-left,0px));bottom:calc(30px + env(safe-area-inset-bottom,0px));z-index:3;max-width:34ch;color:var(--dim);font-size:15px;opacity:0}
+.cdesc b{display:block;color:var(--fg);font:800 20px Syne,sans-serif}
+.chap .num{position:absolute;right:max(20px,env(safe-area-inset-right,0px));bottom:calc(30px + env(safe-area-inset-bottom,0px));z-index:3;font:800 15px Syne,sans-serif;color:var(--dim)}
+.chap .num b{color:var(--red)}
+
+/* PROCESS */
+.proc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,6vw,90px);align-items:center;padding-block:clamp(90px,12vw,160px)}
+.proc .ph{border-radius:20px;overflow:hidden;aspect-ratio:372/404;width:100%;max-width:520px;justify-self:center}
+.proc .ph img{width:100%;height:100%;object-fit:cover;scale:1.2}
+.proc p{color:var(--dim);max-width:44ch}
+.quote{font:700 clamp(24px,2.8vw,36px)/1.15 Syne,sans-serif;color:var(--fg)!important;margin:22px 0}
+@media (max-width:800px){.proc{grid-template-columns:1fr}}
+
+/* GALLERY with focus */
+.galsec{padding-block:clamp(60px,8vw,110px)}
+.gal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:40px}
+.gi{position:relative;border:none;padding:0;background:var(--bg2);border-radius:14px;overflow:hidden;aspect-ratio:372/404;transition:filter .45s,opacity .45s,transform .45s}
+.gi img{width:100%;height:100%;object-fit:cover}
+.gi span{position:absolute;left:12px;bottom:12px;font-weight:600;font-size:13px;background:rgba(11,11,12,.8);padding:5px 10px;border-radius:99px}
+@media (pointer:fine){.gal:hover .gi:not(:hover){filter:blur(4px) grayscale(1);opacity:.45;transform:scale(.97)}}
+.gi.tall{grid-row:span 2;aspect-ratio:auto}
+@media (max-width:900px){.gal{grid-template-columns:repeat(2,minmax(0,1fr))}}
+dialog{border:none;padding:0;background:transparent;width:min(92vw,540px)}
+dialog::backdrop{background:rgba(5,5,6,.92)}
+dialog img{width:100%;border-radius:16px}
+.dbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:14px;flex-wrap:wrap}
+.dbar h3{margin:0;font:800 24px Syne,sans-serif;text-transform:uppercase}
+.x{background:var(--fg);color:var(--bg);border:none;border-radius:99px;padding:10px 16px;font-weight:600}
+
+/* FLASH with magnifier */
+.flash{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,6vw,90px);align-items:center;padding-block:clamp(90px,12vw,150px);border-top:1px solid var(--line)}
+.lensbox{position:relative;border-radius:16px;overflow:hidden;cursor:none;touch-action:none;width:100%;max-width:520px;justify-self:center}
+.lensbox img{width:100%}
+.lens{position:absolute;width:190px;height:190px;border-radius:50%;border:2px solid var(--red);box-shadow:0 20px 50px rgba(0,0,0,.5);pointer-events:none;background-repeat:no-repeat;opacity:0;transition:opacity .2s}
+.lensbox.on .lens{opacity:1}
+.ticks{list-style:none;padding:0;margin:26px 0;display:grid;gap:12px}
+.ticks li{display:flex;gap:12px}.ticks li::before{content:"◉";color:var(--red)}
+@media (max-width:800px){.flash{grid-template-columns:1fr}}
+
+/* ARTISTS */
+.arts{padding-block:clamp(90px,12vw,150px);border-top:1px solid var(--line)}
+.alist{margin-top:40px}
+.arow{position:relative;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) auto;gap:20px;align-items:center;padding-block:26px;border-top:1px solid var(--line);text-decoration:none}
+.arow:last-child{border-bottom:1px solid var(--line)}
+.arow h3{margin:0;font:800 clamp(30px,5vw,72px)/1 Syne,sans-serif;letter-spacing:-.02em;transition:color .3s,transform .5s cubic-bezier(.2,.8,.2,1)}
+.arow p{margin:0;color:var(--dim)}
+.arow .go{font:800 14px Syne,sans-serif;border:1.5px solid var(--line);border-radius:99px;padding:10px 16px;white-space:nowrap}
+.arow:hover h3{color:var(--red);transform:translateX(16px)}
+.arow:hover .go{border-color:var(--fg)}
+.hov{position:fixed;left:0;top:0;width:220px;aspect-ratio:372/404;border-radius:999px 999px 16px 16px;overflow:hidden;pointer-events:none;z-index:50;opacity:0;scale:.6;transition:opacity .3s,scale .3s}
+.hov.on{opacity:1;scale:1}
+.hov img{width:100%;height:100%;object-fit:cover}
+@media (max-width:700px){.arow{grid-template-columns:1fr}}
+
+/* PLANNER */
+.plan{background:var(--fg);color:var(--bg);padding-block:clamp(80px,10vw,130px);border-radius:28px 28px 0 0}
+.plan .kick{color:#b02a1c}.plan .kick::before{border-color:#b02a1c}
+.pgrid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(30px,5vw,80px);align-items:start}
+.plan .lead{color:#55524c;max-width:42ch;margin:20px 0 0;font-size:18px}
+.addr{margin-top:28px;display:grid;gap:4px;font-size:15px;color:#55524c}
+.addr b{color:var(--bg)}
+.q{display:none;gap:18px}.q.on{display:grid}
+.q h3{margin:0;font:800 clamp(30px,3.6vw,48px)/1 Syne,sans-serif;text-transform:uppercase}
+.count{font-weight:600;font-size:14px;color:#b02a1c}
+.opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.opt{position:relative;z-index:0;overflow:hidden;border:2px solid var(--bg);background:transparent;border-radius:14px;padding:16px;text-align:left;font-weight:600;font-size:16px;display:flex;gap:12px;align-items:center;min-height:72px;color:var(--bg);transition:color .3s}
+.opt img{width:44px;height:44px;border-radius:50%;object-fit:cover;flex:none}
+.opt::before{content:"";position:absolute;left:var(--x,50%);top:var(--y,50%);width:0;height:0;border-radius:50%;background:var(--bg);translate:-50% -50%;transition:width .45s,height .45s;z-index:-1}
+.opt:hover::before,.opt[aria-pressed=true]::before{width:260%;height:260%;aspect-ratio:1}
+.opt:hover,.opt[aria-pressed=true]{color:var(--fg)}
+.q input,.q textarea{width:100%;border:2px solid var(--bg);background:transparent;border-radius:14px;padding:15px;font:inherit;color:var(--bg)}
+.q textarea{min-height:100px}
+.q label{font-weight:600;font-size:14px}
+.pnav{display:flex;justify-content:space-between;align-items:center;margin-top:22px}
+.pnav .back{border:none;background:none;font-weight:600}
+.pbtn{background:var(--bg);color:var(--fg);border:none;border-radius:99px;padding:15px 26px;font-weight:600}
+.sum{background:#fff;border:2px dashed #b02a1c;border-radius:14px;padding:16px;white-space:pre-wrap;font-size:15px}
+.note{font-size:14px;color:#55524c;margin:0}
+.dots{display:flex;gap:6px;margin-bottom:18px}.dots i{width:28px;height:4px;border-radius:4px;background:rgba(11,11,12,.18);transition:background .3s}.dots i.on{background:#b02a1c}
+.plan .btn{border-color:var(--bg)}
+.plan .btn:hover{background:var(--bg);color:var(--fg)}
+@media (max-width:860px){.pgrid{grid-template-columns:1fr}}
+@media (max-width:440px){.opts{grid-template-columns:1fr}}
+.end{background:var(--fg);color:var(--bg);padding-block:0 30px;overflow:hidden}
+.end .big{font:800 clamp(64px,16.5vw,290px)/.8 Syne,sans-serif;letter-spacing:-.05em;margin:0;white-space:nowrap;text-transform:uppercase}
+.end .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:14px;font-weight:600;border-top:1.5px solid var(--bg);padding-top:18px;margin-top:22px;padding-bottom:70px}
+@media (min-width:861px){.end .row{padding-bottom:0}}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:70;padding:10px max(14px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(14px,env(safe-area-inset-left,0px));display:none;gap:10px;transform:translateY(120%);transition:transform .4s}
+.sticky.show{transform:none}.sticky .btn{flex:1;justify-content:center;padding:14px 10px;background:var(--bg)}.sticky .btn.red{background:var(--red)}
+@media (max-width:860px){.sticky{display:flex}}
+@media (prefers-reduced-motion:reduce){.ring{animation:none}}
+</style>
+</head><body>
+
+
+<div id="cur"></div>
+<nav class="nav g"><a class="logo" href="#top"><i></i>HITOMI</a><div class="navr"><a class="hm" href="#styles">Styles</a><a class="hm" href="#work">Work</a><a class="hm" href="#artists">Artists</a><a href="#book">Book</a></div></nav>
+
+<header class="hero g" id="top">
+  <div class="kanji" aria-hidden="true">瞳</div>
+  <div class="eye" id="eye" data-cursor="Blink">
+    <svg class="ring" viewBox="0 0 300 300" aria-hidden="true"><defs><path id="cp" d="M150 150 m-132 0 a132 132 0 1 1 264 0 a132 132 0 1 1 -264 0"/></defs>
+      <text><textPath href="#cp" textLength="826" lengthAdjust="spacing">HITOMI TATTOO STUDIO • WEST JAKARTA • WALK‑INS WELCOME • TATTOO &amp; PIERCING •</textPath></text></svg>
+    <div class="iris" id="iris"><img id="irisimg" src="img/atlas.jpg" alt="Realism Atlas tattoo on the upper arm"><div class="shade"></div></div>
+    <div class="pupil" id="pupil"></div>
+    <div class="lid t" id="lt"></div><div class="lid b" id="lb"></div>
+  </div>
+  <p class="cnt"><b id="cn">01/03</b><span id="ct">Realism, upper arm</span></p>
+  <div class="hcopy g">
+    <h1 id="h1">Eyes on every detail</h1>
+    <div class="r"><p><b>Hitomi (瞳)</b> means pupil, the centre of the eye. West Jakarta's premium tattoo and piercing studio. Click the eye to blink.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn red mag" href="#book" data-cursor="Book">Book a session</a><a class="btn mag" href="#styles">See the styles</a></div></div>
+  </div>
+</header>
+
+<div class="stats g"><div><b data-n="13.6">0</b><span>K followers</span></div><div><b data-n="882">0</b><span>pieces posted</span></div><div><b>4</b><span>core styles</span></div><div><b>✓</b><span>walk‑ins welcome</span></div></div>
+
+<section class="chap" id="styles">
+  <div class="layer"><div class="ph"><img src="img/hannya.jpg" alt="Japanese hannya mask with a dagger on the calf"></div></div>
+  <div class="layer"><div class="ph"><img src="img/angel-sleeve.jpg" alt="Black and grey realism angel sleeve"></div></div>
+  <div class="layer"><div class="ph"><img src="img/geo-eyes.jpg" alt="Geometric micro realism with a tree and a pair of eyes"></div></div>
+  <div class="layer"><div class="ph"><img src="img/peony.jpg" alt="Fine line peony on the waist"></div></div>
+  <div class="word" id="w0">Japanese</div><div class="word" id="w1">Realism</div><div class="word" id="w2">Geometric</div><div class="word" id="w3">Fine line</div>
+  <p class="cdesc" id="d0"><b>Japanese</b>Hannya masks, foo dogs, waves and blossoms in solid black and grey.</p>
+  <p class="cdesc" id="d1"><b>Realism</b>Full sleeves and portraits, built up over several sessions.</p>
+  <p class="cdesc" id="d2"><b>Geometric</b>Micro realism inside lines and shapes, sometimes built on Javanese philosophy.</p>
+  <p class="cdesc" id="d3"><b>Fine line</b>Soft florals and lettering, placed where they move with you.</p>
+  <p class="num"><b id="cnum">01</b> / 04</p>
+</section>
+
+<section class="proc g">
+  <div class="ph"><img src="img/process.jpg" alt="Artist working on a realism full sleeve"></div>
+  <div>
+    <p class="kick">On the chair</p>
+    <h2>Three days. One sleeve.</h2>
+    <p class="quote">"His first tattoo ever, a full realism sleeve completed over 3 days."</p>
+    <p>Big pieces are planned with your artist, split into sessions, and photographed again when healed, so you can see how the work settles.</p>
+    <a class="btn mag" href="#book" data-cursor="Plan" style="margin-top:10px">Plan a big piece</a>
+  </div>
+</section>
+
+<section class="galsec g" id="work">
+  <p class="kick">Recent work</p>
+  <h2>Focus on one</h2>
+  <div class="gal" id="gal"></div>
+</section>
+
+<section class="flash g">
+  <div class="lensbox" id="lb2" data-cursor=" "><img src="img/flash.jpg" alt="October flash drop sheet with fixed prices and sizes"><div class="lens" id="lens"></div></div>
+  <div>
+    <p class="kick">Monthly flash drop</p>
+    <h2>Fixed price. Fixed size.</h2>
+    <p style="color:var(--dim);max-width:42ch">Every month our artists release ready‑to‑tattoo designs. Move over the sheet to look closer, then claim one before someone else does.</p>
+    <ul class="ticks"><li>Free consultation with the artist</li><li>Sized for a set spot: backspine, half sleeve, calf, thigh</li><li>New designs posted in our "Update Flash" highlight</li></ul>
+    <a class="btn red mag" href="#book" data-cursor="Claim" id="claimflash">Claim a flash design</a>
+  </div>
+</section>
+
+<section class="arts g" id="artists">
+  <p class="kick">Hover a name</p>
+  <h2>The artists</h2>
+  <div class="alist">
+    <a class="arow" href="https://www.instagram.com/oktaoja/" target="_blank" rel="noopener" data-img="angel-sleeve" data-cursor="View"><h3>@oktaoja</h3><p>Black and grey realism, full sleeves in multi‑day sessions.</p><span class="go">Instagram ↗</span></a>
+    <a class="arow" href="https://www.instagram.com/pinheadtattoo/" target="_blank" rel="noopener" data-img="compass" data-cursor="View"><h3>@pinheadtattoo</h3><p>Geometric work, including concepts drawn from Javanese philosophy.</p><span class="go">Instagram ↗</span></a>
+    <a class="arow" href="https://www.instagram.com/aprilmoon_ink/" target="_blank" rel="noopener" data-img="peony" data-cursor="View"><h3>@aprilmoon_ink</h3><p>Fine line florals in medium and small sizes.</p><span class="go">Instagram ↗</span></a>
+  </div>
+  <p style="color:var(--dim);margin-top:20px;font-size:15px">See the full team on <a href="https://linktr.ee/hitomitattoostudio" target="_blank" rel="noopener">our Linktree</a>.</p>
+</section>
+<div class="hov" id="hov"><img alt=""></div>
+
+<section class="plan g" id="book">
+  <div class="pgrid">
+    <div>
+      <p class="kick">Book in under a minute</p>
+      <h2>Plan your piece</h2>
+      <p class="lead">Four taps and we write the message for you. Send it on Instagram, or book straight through our Linktree. Walk‑ins welcome.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:24px"><a class="btn" href="https://linktr.ee/hitomitattoostudio" target="_blank" rel="noopener">Open our Linktree</a></div>
+      <div class="addr"><b>Hitomi Tattoo Studio</b><span>Jl. Komp. Graha Indah Greenvile Blok BG No.20</span><span>Jakarta Barat 11510</span><a href="https://maps.google.com/?q=Hitomi+Tattoo+Studio+Greenville+Jakarta+Barat" target="_blank" rel="noopener" style="font-weight:600;margin-top:6px">Open in Google Maps ↗</a></div>
+    </div>
+    <div>
+      <div class="dots" id="dots"></div>
+      <div class="q on" data-k="style"><span class="count">1 of 5</span><h3>What style?</h3><div class="opts" data-group="style"></div></div>
+      <div class="q" data-k="place"><span class="count">2 of 5</span><h3>Where on you?</h3><div class="opts" data-group="place"></div></div>
+      <div class="q" data-k="size"><span class="count">3 of 5</span><h3>How big?</h3><div class="opts" data-group="size"></div></div>
+      <div class="q" data-k="when"><span class="count">4 of 5</span><h3>When?</h3><div class="opts" data-group="when"></div></div>
+      <div class="q" data-k="idea"><span class="count">5 of 5</span><h3>Your idea</h3>
+        <label for="nm">Your name</label><input id="nm" autocomplete="given-name" placeholder="e.g. Raka">
+        <label for="id">What do you have in mind? (optional)</label><textarea id="id" placeholder="e.g. hannya mask on the forearm, black and grey"></textarea></div>
+      <div class="q" data-k="done"><h3>Ready to send</h3><div class="sum" id="sum"></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn red" id="send" href="https://ig.me/m/hitomitattoostudio" target="_blank" rel="noopener">Copy &amp; open Instagram DM</a><a class="btn" href="https://linktr.ee/hitomitattoostudio" target="_blank" rel="noopener">Book on Linktree</a></div>
+        <p class="note" id="sn">We copy the message for you. Paste it in the chat that opens.</p></div>
+      <div class="pnav"><button class="back" id="back" type="button">← Back</button><button class="pbtn" id="next" type="button">Next</button></div>
+    </div>
+  </div>
+</section>
+<section class="end g"><p class="big" id="big">Hitomi</p><div class="row"><span>Tattoo &amp; piercing, West Jakarta · <a href="https://www.instagram.com/hitomitattoostudio/" target="_blank" rel="noopener">@hitomitattoostudio</a></span><span>Concept by Arcwise Studios</span></div></section>
+
+<div class="sticky" id="sticky"><a class="btn red" href="#book">Book a session</a><a class="btn" href="https://ig.me/m/hitomitattoostudio" target="_blank" rel="noopener">DM us</a></div>
+<dialog id="dlg"><img id="dimg" alt=""><div class="dbar"><h3 id="dt"></h3><div style="display:flex;gap:8px"><a class="btn red" id="dwant" href="#book" style="padding:10px 16px;font-size:14px">I want this style</a><button class="x" id="dx">Close</button></div></div></dialog>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(function(){
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,fine=matchMedia('(pointer:fine)').matches,hasG=typeof gsap!=='undefined';
+if(hasG&&typeof ScrollTrigger!=='undefined')gsap.registerPlugin(ScrollTrigger);
+let lenis=null;
+if(!reduce&&hasG&&typeof Lenis!=='undefined'){lenis=new Lenis({lerp:.09});lenis.on('scroll',ScrollTrigger.update);gsap.ticker.add(t=>lenis.raf(t*1000));gsap.ticker.lagSmoothing(0);
+  $$('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();lenis.scrollTo(t,{duration:1.4})}}))}
+
+/* ===== the eye ===== */
+const EYE=[['atlas','Realism, upper arm'],['hannya','Japanese hannya, calf'],['foodog','Japanese foo dog, chest']];let ei=0;
+const eye=$('#eye'),iris=$('#iris'),irisImg=$('#irisimg'),pupil=$('#pupil');
+EYE.forEach(e=>{const i=new Image();i.src='img/'+e[0]+'.jpg'});
+let tx=0,ty=0,px=0,py=0;
+addEventListener('pointermove',e=>{const r=eye.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height/2;const dx=e.clientX-cx,dy=e.clientY-cy,d=Math.hypot(dx,dy)||1,m=Math.min(1,d/(r.width*.9));tx=dx/d*m;ty=dy/d*m});
+(function lp(){px+=(tx-px)*.08;py+=(ty-py)*.08;const R=eye.offsetWidth;
+  pupil.style.transform='translate('+(px*R*.26)+'px,'+(py*R*.26)+'px)';irisImg.style.transform='translate('+(-px*R*.06)+'px,'+(-py*R*.06)+'px)';requestAnimationFrame(lp)})();
+function blink(swap){if(!hasG||reduce){if(swap)setImg();return}
+  const tl=gsap.timeline();tl.to(['#lt','#lb'],{scaleY:1,duration:.14,ease:'power2.in'}).add(()=>{if(swap)setImg()}).to(['#lt','#lb'],{scaleY:0,duration:.26,ease:'power2.out',delay:.05})}
+function setImg(){ei=(ei+1)%EYE.length;irisImg.src='img/'+EYE[ei][0]+'.jpg';irisImg.alt=EYE[ei][1]+' tattoo';$('#cn').textContent='0'+(ei+1)+'/03';$('#ct').textContent=EYE[ei][1]}
+eye.addEventListener('click',()=>blink(true));
+eye.addEventListener('pointerenter',()=>eye.classList.add('dil'));eye.addEventListener('pointerleave',()=>eye.classList.remove('dil'));
+if(!reduce)setInterval(()=>{if(!document.hidden)blink(Math.random()<.5)},4200);
+if(hasG&&!reduce){gsap.from('.iris',{scale:.2,opacity:0,duration:1.6,ease:'expo.out',delay:.1});gsap.from('.ring',{opacity:0,duration:2,delay:.6});
+  gsap.from('.kanji',{opacity:0,scale:1.2,duration:2.4,ease:'expo.out'});gsap.from('.hcopy > *',{y:40,opacity:0,stagger:.12,duration:1,delay:.7,ease:'power3.out'});
+  gsap.to('.eye',{scale:.6,opacity:.2,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+  gsap.to('.kanji',{yPercent:30,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}})}
+
+/* stats count */
+$$('[data-n]').forEach(el=>{const n=+el.dataset.n,dec=n%1?1:0;if(!hasG){el.textContent=n;return}
+  const o={v:0};gsap.to(o,{v:n,duration:1.8,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 90%'},onUpdate:()=>el.textContent=o.v.toFixed(dec)})});
+
+/* cursor */
+const cur=$('#cur');if(fine){let x=innerWidth/2,y=innerHeight/2,X=x,Y=y;addEventListener('pointermove',e=>{X=e.clientX;Y=e.clientY});
+  (function c(){x+=(X-x)*.22;y+=(Y-y)*.22;cur.style.transform='translate('+x+'px,'+y+'px)';requestAnimationFrame(c)})();
+  document.addEventListener('pointerover',e=>{const t=e.target.closest('[data-cursor]');if(t&&t.dataset.cursor.trim()){cur.classList.add('big');cur.textContent=t.dataset.cursor}else{cur.classList.remove('big');cur.textContent=''}cur.style.opacity=t&&!t.dataset.cursor.trim()?0:1})}
+
+/* magnetic */
+if(fine&&hasG)$$('.mag').forEach(b=>{b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();gsap.to(b,{x:(e.clientX-r.left-r.width/2)*.3,y:(e.clientY-r.top-r.height/2)*.4,duration:.4,ease:'power3.out'})});
+  b.addEventListener('pointerleave',()=>gsap.to(b,{x:0,y:0,duration:.7,ease:'elastic.out(1,.4)'}))});
+
+/* ===== pinned style chapters ===== */
+const layers=$$('.chap .layer .ph'),words=$$('.word'),descs=$$('.cdesc');
+if(hasG&&!reduce){const tl=gsap.timeline({scrollTrigger:{trigger:'.chap',start:'top top',end:'+=320%',pin:true,scrub:.6,
+    onUpdate:s=>{$('#cnum').textContent='0'+Math.min(4,Math.floor(s.progress*4)+1)}}});
+  layers.forEach((ph,i)=>{const at=i;
+    tl.to(ph,{clipPath:'circle(75% at 50% 50%)',duration:1,ease:'power2.inOut'},at)
+      .to(ph.querySelector('img'),{scale:1,duration:1.2,ease:'none'},at)
+      .fromTo(words[i],{opacity:0,yPercent:40},{opacity:1,yPercent:0,duration:.4},at+.12)
+      .fromTo(descs[i],{opacity:0,y:20},{opacity:1,y:0,duration:.4},at+.2);
+    if(i<layers.length-1)tl.to([words[i],descs[i]],{opacity:0,duration:.2},at+.95)});
+}else{layers.forEach(p=>p.style.clipPath='none');$('.chap').style.height='auto';$$('.chap .layer').forEach(l=>{l.style.position='relative';l.style.padding='20px 0'});words.forEach(w=>w.style.display='none');descs.forEach(d=>{d.style.position='relative';d.style.opacity=1;d.style.margin='0 auto 30px'})}
+
+/* process + headings */
+if(hasG&&!reduce){gsap.to('.proc .ph img',{scale:1,ease:'none',scrollTrigger:{trigger:'.proc',start:'top bottom',end:'bottom top',scrub:true}});
+  $$('h2').forEach(h=>{h.innerHTML=h.textContent.split(' ').map(w=>'<span style="display:inline-block;overflow:hidden;vertical-align:top"><span style="display:inline-block">'+w+'</span></span>').join(' ');
+    gsap.from(h.querySelectorAll('span>span'),{yPercent:110,stagger:.06,duration:1,ease:'expo.out',scrollTrigger:{trigger:h,start:'top 88%'}})});
+  $('#big').innerHTML=[...'Hitomi'].map(c=>'<span style="display:inline-block">'+c+'</span>').join('');
+  gsap.from('#big span',{yPercent:100,stagger:.05,duration:1.2,ease:'expo.out',scrollTrigger:{trigger:'.end',start:'top 85%'}})}
+
+/* gallery */
+const G=[['atlas','Atlas, realism','Realism'],['foodog','Foo dog, Japanese','Japanese'],['fan','Traditional fan','Japanese'],['geo-eyes','Tree & eyes, geometric','Geometric'],['hannya','Hannya mask','Japanese'],['compass','Compass & mountains','Geometric'],['peony','Waist peony','Fine line'],['lettering','Couple lettering','Fine line'],['angel-sleeve','Angel sleeve','Realism']];
+const gal=$('#gal');
+G.forEach((g,i)=>{const b=document.createElement('button');b.className='gi';b.dataset.cursor='View';b.dataset.s=g[2];
+  b.innerHTML='<img src="img/'+g[0]+'.jpg" alt="'+g[1]+'"><span>'+g[1]+'</span>';
+  b.onclick=()=>{$('#dimg').src='img/'+g[0]+'.jpg';$('#dimg').alt=g[1];$('#dt').textContent=g[1];$('#dwant').dataset.s=g[2];$('#dlg').showModal()};gal.appendChild(b)});
+if(hasG&&!reduce)gsap.fromTo('.gi',{y:80,opacity:0},{y:0,opacity:1,stagger:.07,duration:1,ease:'expo.out',clearProps:'transform,opacity',scrollTrigger:{trigger:'#gal',start:'top 85%'}});
+$('#dx').onclick=()=>$('#dlg').close();$('#dlg').addEventListener('click',e=>{if(e.target.id==='dlg')$('#dlg').close()});
+
+/* flash magnifier */
+const lb=$('#lb2'),lens=$('#lens'),lim=lb.querySelector('img');
+function lensAt(e){const r=lb.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top,Z=2.6;lb.classList.add('on');
+  lens.style.left=(x-95)+'px';lens.style.top=(y-95)+'px';lens.style.backgroundImage='url('+lim.src+')';lens.style.backgroundSize=(r.width*Z)+'px '+(r.height*Z)+'px';lens.style.backgroundPosition=(-x*Z+95)+'px '+(-y*Z+95)+'px'}
+lb.addEventListener('pointermove',lensAt);lb.addEventListener('pointerdown',lensAt);lb.addEventListener('pointerleave',()=>lb.classList.remove('on'));lb.addEventListener('pointerup',e=>{if(e.pointerType!=='mouse')lb.classList.remove('on')});
+
+/* artist hover preview */
+const hov=$('#hov');let hx=0,hy=0,HX=0,HY=0;
+if(fine){$$('.arow').forEach(a=>{a.addEventListener('pointerenter',()=>{hov.querySelector('img').src='img/'+a.dataset.img+'.jpg';hov.classList.add('on')});a.addEventListener('pointerleave',()=>hov.classList.remove('on'))});
+  addEventListener('pointermove',e=>{HX=e.clientX+30;HY=e.clientY-120});(function h(){hx+=(HX-hx)*.12;hy+=(HY-hy)*.12;hov.style.transform='translate('+hx+'px,'+hy+'px) rotate('+((HX-hx)*.05)+'deg)';requestAnimationFrame(h)})()}
+
+/* planner */
+const OPT={style:[['Realism','atlas'],['Japanese','hannya'],['Geometric','geo-eyes'],['Fine line','peony'],['Flash design','fan'],['Piercing',null]],
+ place:[['Arm / sleeve'],['Leg / calf'],['Chest / back'],['Ribs / waist'],['Hand / wrist'],['Not sure']],
+ size:[['Small, under 10 cm'],['Medium, 10–20 cm'],['Large, 20 cm+'],['Full sleeve / multi‑session']],
+ when:[['This week'],['This month'],['In 1–3 months'],['Just exploring']]};
+const A={};
+Object.entries(OPT).forEach(([k,l])=>{const box=$('[data-group="'+k+'"]');l.forEach(([t,img])=>{const b=document.createElement('button');b.type='button';b.className='opt';b.setAttribute('aria-pressed','false');
+  b.innerHTML=(img?'<img src="img/'+img+'.jpg" alt="">':'')+'<span>'+t+'</span>';
+  b.addEventListener('pointerenter',e=>{const r=b.getBoundingClientRect();b.style.setProperty('--x',(e.clientX-r.left)+'px');b.style.setProperty('--y',(e.clientY-r.top)+'px')});
+  b.onclick=()=>{A[k]=t;box.querySelectorAll('.opt').forEach(x=>x.setAttribute('aria-pressed',x===b));setTimeout(()=>go(1),280)};box.appendChild(b)})});
+const Q=$$('.q');let c2=0;$('#dots').innerHTML=Q.map(()=>'<i></i>').join('');
+function show(d){Q.forEach((q,i)=>q.classList.toggle('on',i===c2));$$('#dots i').forEach((x,i)=>x.classList.toggle('on',i<=c2));
+  $('#back').style.visibility=c2?'visible':'hidden';$('#next').style.display=c2>=Q.length-1?'none':'';$('#next').textContent=c2===Q.length-2?'Write my message':'Next';
+  if(Q[c2].dataset.k==='done')compose();if(hasG&&!reduce&&d)gsap.from(Q[c2].children,{x:d*50,opacity:0,stagger:.05,duration:.5,ease:'power3.out'})}
+function go(d){const k=Q[c2].dataset.k;if(d>0&&OPT[k]&&!A[k]){if(hasG)gsap.fromTo(Q[c2].querySelector('h3'),{x:-8},{x:0,duration:.4,ease:'elastic.out(1,.3)'});return}c2=Math.max(0,Math.min(Q.length-1,c2+d));show(d)}
+$('#next').onclick=()=>go(1);$('#back').onclick=()=>go(-1);
+function compose(){const n=$('#nm').value.trim(),idea=$('#id').value.trim();const m='Hi Hitomi! '+(n?'I\'m '+n+'. ':'')+'I\'d like to book a '+(A.style==='Piercing'?'piercing':'tattoo')+'.\n\nStyle: '+A.style+'\nPlacement: '+A.place+'\nSize: '+A.size+'\nWhen: '+A.when+(idea?'\nIdea: '+idea:'')+'\n\nCould you tell me the price range and which artist is free? Thank you!';$('#sum').textContent=m;return m}
+$('#send').addEventListener('click',()=>{const m=compose();try{navigator.clipboard.writeText(m).then(()=>$('#sn').textContent='Copied. Paste it in the Instagram chat.',()=>$('#sn').textContent='Select the message above, copy it, then paste it in the chat.')}catch(e){}});
+function pick(s){const b=[...$('[data-group="style"]').children].find(x=>x.textContent.trim()===s);if(b){A.style=s;$('[data-group="style"]').querySelectorAll('.opt').forEach(x=>x.setAttribute('aria-pressed',x===b));c2=1;show(1)}}
+$('#dwant').addEventListener('click',()=>{$('#dlg').close();pick($('#dwant').dataset.s)});
+$('#claimflash').addEventListener('click',()=>pick('Flash design'));
+show(0);
+
+const st=$('#sticky'),bk=$('#book');addEventListener('scroll',()=>{const r=bk.getBoundingClientRect();st.classList.toggle('show',scrollY>innerHeight*.8&&!(r.top<innerHeight&&r.bottom>0))},{passive:true});
+})();
+</script>
+
+</body></html>
